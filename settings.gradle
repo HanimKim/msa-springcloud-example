@@ -1,0 +1,5 @@
+rootProject.name = 'msa-springcloud-example'
+include 'auth-service'
+include 'configserver'
+include 'member-service'
+
