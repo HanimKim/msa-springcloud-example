@@ -14,7 +14,7 @@ import java.util.Map;
 
 @SpringBootApplication
 @RestController
-@EnableEurekaClient
+//@EnableEurekaClient
 @EnableResourceServer
 @EnableAuthorizationServer      // 이 서비스가 OAuth2 인증 서버가 될 것이라고 스프링 클라우드에 알림
 public class AuthServerApplication {

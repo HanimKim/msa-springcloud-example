@@ -23,6 +23,6 @@ spring:
     config:
       server:
         native:
-          search-locations: file:C:/myhome/03_Study/13_SpringCloud/assucloud/config-repo/member-service
+          search-locations: file:C:/workspace/hanim/config-repo/member-service
         encrypt:
           enabled: false

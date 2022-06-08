@@ -42,7 +42,11 @@ subprojects {
 
         implementation 'org.springframework.cloud:spring-cloud-starter'
 
-        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+        //TODO. 왜 빌드 에러 나는지 확인해보기
+//        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+        implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
     }
 
     // TODO. spring-cloud의 dependencyManagement가 정확히 무슨 역활을 하는지 찾아보기.
@@ -80,5 +84,7 @@ project(':member-service') {
     dependencies {
         implementation 'org.springframework.cloud:spring-cloud-starter-config'
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+
     }
 }
