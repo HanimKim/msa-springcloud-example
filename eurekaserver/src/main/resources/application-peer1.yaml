@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: eurekaserver-peer1    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
+  profiles: peer1
+server:
+  port: 8762          # 유레카 서버가 수신 대기할 포트
+your.name: "EUREKA peer-1"
+#spring:
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: '{cipher}17b3128621cb4e71fbb5a85ef726b44951b62fac541e1de6c2728c6e9d3594ec'
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+
+eureka:
+  server:
+    enable-self-preservation: true   # 일시적인 네트워크 장애로 인한 서비스 해제 막기 위한 자기 보호 모드 (디폴트 true, 운영에선 반드시 true 로 설정 필요)
+    response-cache-update-interval-ms: 30000  # 유레카 서버의 캐싱 업데이트 주기 (디폴트 30,000ms)
+    eviction-interval-timer-in-ms: 60000  # 클라이언트로부터 하트비트가 계속 수신 되는지 점검 (디폴트 60,000)
+    wait-time-in-ms-when-sync-empty: 3000   # 유레카 서버가 시작되고 유레카 피어링 노드로부터 Instance 들을 가져올 수 없을 때 기다릴 시간 (디폴트 3000ms)
+    registry-sync-retries: 5    # 유레카 피어 노드로부터 registry 를 갱신할 수 없을 때 재시도 횟수 (디폴트 5)
+  client:
+    register-with-eureka: false           # 유레카 서비스에 (자신을) 등록하지 않는다. (클러스터 모드가 아니므로) -> false 로 해도 피어링이 된다.
+    fetch-registry: false                 # 레지스트리 정보를 로컬에 캐싱하지 않는다. (클러스터 모드가 아니므로)
+    serviceUrl:
+      defaultZone: http://peer2:8763/eureka/   # 피어링 시 필요
+#      defaultZone: http://peer1:8762/eureka/
+
+#logging:
+#  level:
+#    com.netflix: WARN
+#    org.springframework.web: WARN
+#    com.example: DEBUG

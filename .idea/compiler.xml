@@ -8,15 +8,23 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.24/13a394eed5c4f9efb2a6d956e2086f1d81e857d9/lombok-1.18.24.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.7.0/d8b66c3d68ff21cb10bb908cd873c4a6ecd8880f/spring-boot-configuration-processor-2.7.0.jar" />
         </processorPath>
+        <module name="msa-springcloud-example.eurekaserver.main" />
         <module name="msa-springcloud-example.member-service.main" />
+        <module name="msa-springcloud-example.sp-gateway-server.main" />
         <module name="msa-springcloud-example.configserver.main" />
+        <module name="msa-springcloud-example.event-service.main" />
         <module name="msa-springcloud-example.auth-service.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel target="1.8">
+      <module name="apigw" target="11" />
+      <module name="apigw.main" target="11" />
+      <module name="apigw.test" target="11" />
       <module name="msa-springcloud-example.auth-server" target="1.8" />
       <module name="msa-springcloud-example.auth-server.main" target="1.8" />
       <module name="msa-springcloud-example.auth-server.test" target="1.8" />
+      <module name="sp-gateway-server.main" target="11" />
+      <module name="sp-gateway-server.test" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

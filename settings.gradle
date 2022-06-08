@@ -2,4 +2,7 @@ rootProject.name = 'msa-springcloud-example'
 include 'auth-service'
 include 'configserver'
 include 'member-service'
-
+include 'eurekaserver'
+include 'event-service'
+include 'zuulserver'
+include 'sp-gateway-server'

@@ -1,8 +1,14 @@
+#spring:
+#  application:
+#    name: event-service    # 서비스 ID (컨피그 클라이언트가 어떤 서비스를 조회하는지 매핑)
+#  profiles:
+#    active: default         # 서비스가 실행할 기본 프로파일
+
 server:
   port: 8090
 your.name: "MEMBER DEFAULT..."
 #spring:
-#  rabbitmq:
+#  rabbitmq:d
 #    host: localhost
 #    port: 5672
 #    username: guest
@@ -15,3 +21,8 @@ management:
   endpoint:
     shutdown:
       enabled: true
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8901/auth/user    # OAuth2 콜백 URL

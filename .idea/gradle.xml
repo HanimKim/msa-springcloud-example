@@ -4,6 +4,8 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -11,34 +13,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/auth-service" />
             <option value="$PROJECT_DIR$/configserver" />
+            <option value="$PROJECT_DIR$/eurekaserver" />
+            <option value="$PROJECT_DIR$/event-service" />
             <option value="$PROJECT_DIR$/member-service" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/configserver" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/configserver" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/demo" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/demo" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/member-service" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/member-service" />
+            <option value="$PROJECT_DIR$/sp-gateway-server" />
+            <option value="$PROJECT_DIR$/zuulserver" />
           </set>
         </option>
       </GradleProjectSettings>
