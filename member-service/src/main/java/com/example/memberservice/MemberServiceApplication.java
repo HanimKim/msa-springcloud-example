@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @EnableEurekaClient
 @SpringBootApplication
-@EnableResourceServer
+@EnableResourceServer   // 보호 자원으로 설정
 public class MemberServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(MemberServiceApplication.class, args);

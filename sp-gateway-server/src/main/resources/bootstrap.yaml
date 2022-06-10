@@ -7,6 +7,11 @@ spring:
     config:
       uri: http://localhost:8889  # Config Server 위치
     gateway:
+#      default-filters:
+#        #Remove All the sensitive request headers (Cookie, Set-Cookie & Authorization) while passing request to downstream services
+#        - RemoveRequestHeader=Cookie
+#        - RemoveRequestHeader=Set-Cookie
+#        - RemoveRequestHeader=Authorization
       httpclient:
         connect-timeout: 500
         response-timeout: 1000
